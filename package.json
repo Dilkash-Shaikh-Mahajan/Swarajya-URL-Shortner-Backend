@@ -1,0 +1,25 @@
+{
+  "name": "swarajya-url-shortner",
+  "version": "1.0.0",
+  "description": "Its the backend of Swarajya URL Shortner Website. It is a Startup Started Dilkash Shaikh Mahajan",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "keywords": [
+    "url",
+    "shortner",
+    "mern",
+    "dilkash"
+  ],
+  "author": "Dilkash Shaikh Mahajan",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "shortid": "^2.2.16"
+  }
+}
