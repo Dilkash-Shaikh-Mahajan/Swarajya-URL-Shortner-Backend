@@ -5,6 +5,6 @@ const { setContact } = require('../controllers/contactControllers');
 router.get('/getURLData', getData);
 router.post('/makeUrl', makeUrl);
 router.get('/:shortURL', redirectUrl);
-router.get('/contact', setContact);
+router.post('/contact', setContact);
 
 module.exports = router;
