@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+var ip = require('ip');
 const routes = require('./routes');
 const Routes = require('./routes/index');
 const db = require('./config');
 db();
 require('dotenv').config();
 const PORT = process.env.PORT || 5786;
-
+console.log(ip.address());
 app.use(function (req, res, next) {
 	// Website you wish to allow to connect
 	res.setHeader('Access-Control-Allow-Origin', '*');

@@ -19,18 +19,18 @@ module.exports.makeUrl = (req, res) => {
 		console.log('URL is valid');
 		console.log('checking if URL already exist in database');
 		var findExistingEntry = URL.findOne(
-			{ original_url: longURL },
-			{ original_url: 1, short_url: 1 },
-		).then(function (data) {
+			{ longURL },
+			{ longURL: 1, shortURL: 1 },
+		).then(function (response) {
 			//return the shortened URL if already in collection
-			if (data) {
+			if (response) {
 				console.log('already here');
-				console.log(data);
-				console.log(data.short_url);
-				return res.send({
-					original_url: data.original_url,
-					short_url: data.short_url,
-				});
+				console.log(response);
+				console.log(response.shortURL);
+				return res.status(200).json({ success: true, response });
+				// return res.send({
+				// 	data,
+				// });
 			} else {
 				console.log('did not find URL in database');
 				console.log('checking document count');
